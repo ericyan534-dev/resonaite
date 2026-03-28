@@ -1,0 +1,76 @@
+{
+  "name": "relax_alpha_10hz",
+  "mode": "relax",
+  "description": "Alpha-range (10 Hz) CIM bed for relaxation, with warm pink noise.",
+  "target_brainwave_band": "alpha",
+  "references": [
+    "Klimesch, W. (1999). EEG alpha and theta oscillations. Brain Research Reviews."
+  ],
+  "rationale": "CIM relax: 10 Hz (peak alpha) AM in a narrow bed (200\u20132500 Hz) at -16 dB. Even gentler than focus presets \u2014 the modulation should be subliminal. Warm-EQ pink noise at -28 dB adds a dark, enveloping bed without any harshness. Zero audible tremolo.",
+  "sample_rate": 44100,
+  "input_normalization": "peak",
+  "bed_config": {
+    "low_freq": 200.0,
+    "high_freq": 2500.0,
+    "filter_order": 4,
+    "filter_type": "butterworth",
+    "mix_db": -16.0
+  },
+  "bed_am_params": {
+    "rate": 10.0,
+    "depth": 0.04,
+    "waveform": "sine",
+    "ramp_seconds": 7.0,
+    "phase_offset": 0.0
+  },
+  "am_target": "bed_only",
+  "noise_params": [
+    {
+      "noise_type": "pink",
+      "level": 0.025,
+      "level_db": -28.0,
+      "am_params": null,
+      "eq": {
+        "bands": [
+          {
+            "filter_type": "lowpass",
+            "freq": 6000.0,
+            "gain_db": 0.0,
+            "q": 0.707,
+            "order": 3
+          },
+          {
+            "filter_type": "highshelf",
+            "freq": 3000.0,
+            "gain_db": -4.0,
+            "q": 0.707,
+            "order": 2
+          },
+          {
+            "filter_type": "lowshelf",
+            "freq": 200.0,
+            "gain_db": 2.0,
+            "q": 0.707,
+            "order": 2
+          }
+        ],
+        "enabled": true
+      },
+      "seed": null,
+      "fade_in_seconds": 5.0
+    }
+  ],
+  "mixer_params": {
+    "master_gain": 0.8,
+    "normalize": true,
+    "limiter_threshold": 0.95,
+    "limiter_knee": 0.1,
+    "make_stereo": true
+  },
+  "naturalness_gates": {
+    "modulation_index_increase_max": 0.05,
+    "peak_power_db_max": -45.0,
+    "lf_noise_energy_db_max": -30.0,
+    "enabled": true
+  }
+}

@@ -1,0 +1,20 @@
+require('dotenv').config();
+const app = require('./app');
+const { initDatabase } = require('./config/database');
+
+const PORT = process.env.PORT || 3001;
+
+// Initialize database (async) then start server
+async function start() {
+  try {
+    await initDatabase();
+    app.listen(PORT, () => {
+      console.log(`Resonaite server running on port ${PORT}`);
+    });
+  } catch (error) {
+    console.error('Failed to start server:', error);
+    process.exit(1);
+  }
+}
+
+start();

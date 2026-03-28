@@ -1,0 +1,31 @@
+{
+  "name": "resonaite-server",
+  "private": true,
+  "version": "1.0.0",
+  "scripts": {
+    "dev": "node --watch src/index.js",
+    "start": "node src/index.js",
+    "seed": "node db/seed.js",
+    "init-db": "node db/init.js",
+    "gcs:upload": "node scripts/gcs-upload.js",
+    "gcs:upload:dry": "node scripts/gcs-upload.js --dry-run",
+    "gcs:list": "node scripts/gcs-upload.js --list",
+    "eeg": "node eeg-bridge.js",
+    "eeg:serial": "node eeg-bridge.js --serial",
+    "eeg:tgc": "node eeg-bridge.js --tgc",
+    "eeg:demo": "node eeg-bridge.js --demo"
+  },
+  "dependencies": {
+    "@google-cloud/storage": "^7.7.0",
+    "google-auth-library": "^9.6.0",
+    "axios": "^1.6.2",
+    "bcryptjs": "^2.4.3",
+    "sql.js": "^1.10.0",
+    "cors": "^2.8.5",
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
+    "jsonwebtoken": "^9.0.2",
+    "multer": "^1.4.5-lts.1",
+    "uuid": "^9.0.0"
+  }
+}

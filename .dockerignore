@@ -1,0 +1,12 @@
+node_modules
+.git
+.env
+*.db
+server/db/resonaite.db
+server/uploads/generated/*
+server/uploads/processed/*
+client/dist
+client/node_modules
+server/node_modules
+.DS_Store
+*.log

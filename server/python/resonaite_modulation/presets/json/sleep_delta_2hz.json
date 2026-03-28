@@ -1,0 +1,77 @@
+{
+  "name": "sleep_delta_2hz",
+  "mode": "sleep",
+  "description": "Delta-range (2 Hz) CIM bed with band-limited brown noise for sleep.",
+  "target_brainwave_band": "delta",
+  "references": [
+    "Ngo, H.V., et al. (2013). Auditory closed-loop stimulation. Neuron.",
+    "Zhou, J., et al. (2012). Pink noise and sleep consolidation. J Theor Biol."
+  ],
+  "rationale": "CIM sleep: very gentle 2 Hz AM in a narrow bed (200\u20132000 Hz) at -18 dB. Because low-rate AM (0.5\u20133 Hz) is perceived as slow swells, depth is extra-low (0.03) to keep the effect subliminal. Brown noise at -28 dB with HP at 60 Hz provides dark masking without low-end wash. Zero pumping, zero harshness, stable loudness.",
+  "sample_rate": 44100,
+  "input_normalization": "peak",
+  "bed_config": {
+    "low_freq": 200.0,
+    "high_freq": 2000.0,
+    "filter_order": 4,
+    "filter_type": "butterworth",
+    "mix_db": -18.0
+  },
+  "bed_am_params": {
+    "rate": 2.0,
+    "depth": 0.03,
+    "waveform": "sine",
+    "ramp_seconds": 10.0,
+    "phase_offset": 0.0
+  },
+  "am_target": "bed_only",
+  "noise_params": [
+    {
+      "noise_type": "brown",
+      "level": 0.025,
+      "level_db": -28.0,
+      "am_params": null,
+      "eq": {
+        "bands": [
+          {
+            "filter_type": "highpass",
+            "freq": 60.0,
+            "gain_db": 0.0,
+            "q": 0.707,
+            "order": 2
+          },
+          {
+            "filter_type": "lowpass",
+            "freq": 6000.0,
+            "gain_db": 0.0,
+            "q": 0.707,
+            "order": 2
+          },
+          {
+            "filter_type": "highshelf",
+            "freq": 3000.0,
+            "gain_db": -3.0,
+            "q": 0.707,
+            "order": 2
+          }
+        ],
+        "enabled": true
+      },
+      "seed": null,
+      "fade_in_seconds": 8.0
+    }
+  ],
+  "mixer_params": {
+    "master_gain": 0.75,
+    "normalize": true,
+    "limiter_threshold": 0.95,
+    "limiter_knee": 0.1,
+    "make_stereo": true
+  },
+  "naturalness_gates": {
+    "modulation_index_increase_max": 0.05,
+    "peak_power_db_max": -45.0,
+    "lf_noise_energy_db_max": -30.0,
+    "enabled": true
+  }
+}

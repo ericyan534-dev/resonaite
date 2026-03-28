@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover, maximum-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <meta name="theme-color" content="#0a0f0a" />
+  <title>Resonaite — Sound Therapy</title>
+  <link rel="manifest" href="/manifest.json" />
+  <style>
+    * { box-sizing: border-box; margin: 0; -webkit-tap-highlight-color: transparent; }
+    body { overflow-x: hidden; overscroll-behavior: none; }
+    /* Safe area insets for notched phones */
+    #root { padding-top: env(safe-area-inset-top); padding-bottom: env(safe-area-inset-bottom); }
+    /* Prevent text selection on interactive elements */
+    button, [role="button"] { -webkit-user-select: none; user-select: none; }
+    /* Ensure minimum touch targets */
+    button, [role="button"], a { min-height: 44px; min-width: 44px; }
+    /* Smooth scrolling */
+    html { scroll-behavior: smooth; -webkit-overflow-scrolling: touch; }
+  </style>
+  <script type="module" crossorigin src="/assets/index-CIrnSc7p.js"></script>
+  <link rel="stylesheet" crossorigin href="/assets/index-C5qguXsD.css">
+</head>
+<body>
+  <div id="root"></div>
+  <script>
+    // Register service worker for offline support
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', function() {
+        navigator.serviceWorker.register('/sw.js').catch(function() {});
+      });
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,8 @@
+[
+  {
+    "origin": ["https://resonaite.example.com", "http://localhost:5173"],
+    "method": ["GET", "HEAD", "OPTIONS"],
+    "responseHeader": ["Content-Type", "Range", "Accept-Ranges"],
+    "maxAgeSeconds": 3600
+  }
+]
