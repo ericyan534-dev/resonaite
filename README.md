@@ -77,10 +77,8 @@ resonaite/
 │           ├── pipeline.py     # Main processing pipeline
 │           ├── core/           # am.py, bed.py, mixer.py, noise.py, gates.py
 │           └── presets/        # 6 protocol presets (focus, relax, sleep)
-├── music/                      # 73 curated audio tracks
 ├── package.json                # Monorepo root (workspaces: client, server)
 ├── Dockerfile                  # Container deployment
-└── deploy.sh                   # GCP deployment script
 ```
 
 ## Getting Started
