@@ -1,0 +1,398 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		4018D0481B4A8ADB00807430 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4018D0471B4A8ADB00807430 /* AppDelegate.m */; };
+		4018D04A1B4A8ADB00807430 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4018D0491B4A8ADB00807430 /* main.m */; };
+		4018D04D1B4A8ADB00807430 /* ViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 4018D04C1B4A8ADB00807430 /* ViewController.mm */; };
+		4018D04F1B4A8ADB00807430 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4018D04E1B4A8ADB00807430 /* Images.xcassets */; };
+		4018D0521B4A8ADB00807430 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4018D0501B4A8ADB00807430 /* Main.storyboard */; };
+		4018D06D1B4CFFE400807430 /* IOBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4018D06C1B4CFFE400807430 /* IOBluetooth.framework */; };
+		4018D06F1B4CFFEC00807430 /* IOBluetoothUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4018D06E1B4CFFEC00807430 /* IOBluetoothUI.framework */; };
+		4018D0B51B4E15B500807430 /* CorePlot.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4018D0B41B4E15B500807430 /* CorePlot.framework */; };
+		4018D0B71B4E185F00807430 /* CorePlot.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 4018D0B41B4E15B500807430 /* CorePlot.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		404E39991C604AB0009605D4 /* TGStreamMac.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 404E39981C604AB0009605D4 /* TGStreamMac.framework */; };
+		4066DA1A1C0FD86C00928757 /* led-off.png in Resources */ = {isa = PBXBuildFile; fileRef = 4066DA181C0FD86C00928757 /* led-off.png */; };
+		4066DA1B1C0FD86C00928757 /* led-on.png in Resources */ = {isa = PBXBuildFile; fileRef = 4066DA191C0FD86C00928757 /* led-on.png */; };
+		40B15D591C17B883007AD7E0 /* FFTAccelerate.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 40B15D571C17B883007AD7E0 /* FFTAccelerate.cpp */; };
+		40B15D5B1C17BC4D007AD7E0 /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 40B15D5A1C17BC4C007AD7E0 /* Accelerate.framework */; };
+		40BA2FF31C2EC2AE005FE7B9 /* AlgoSdk.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 40BA2FF21C2EC2AE005FE7B9 /* AlgoSdk.framework */; };
+		40BA2FF41C2EC2AE005FE7B9 /* AlgoSdk.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 40BA2FF21C2EC2AE005FE7B9 /* AlgoSdk.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		4018D06B1B4A8DDF00807430 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				4018D0B71B4E185F00807430 /* CorePlot.framework in Embed Frameworks */,
+				40BA2FF41C2EC2AE005FE7B9 /* AlgoSdk.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		400FFC041B60861700A261AA /* canned_data.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = canned_data.c; sourceTree = "<group>"; };
+		4018D0411B4A8ADB00807430 /* Algo SDK Sample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Algo SDK Sample.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		4018D0451B4A8ADB00807430 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4018D0461B4A8ADB00807430 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		4018D0471B4A8ADB00807430 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		4018D0491B4A8ADB00807430 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		4018D04B1B4A8ADB00807430 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		4018D04C1B4A8ADB00807430 /* ViewController.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = ViewController.mm; sourceTree = "<group>"; };
+		4018D04E1B4A8ADB00807430 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		4018D0511B4A8ADB00807430 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		4018D05C1B4A8ADB00807430 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4018D05D1B4A8ADB00807430 /* Algo_SDK_SampleTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Algo_SDK_SampleTests.m; sourceTree = "<group>"; };
+		4018D06C1B4CFFE400807430 /* IOBluetooth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IOBluetooth.framework; path = ../../../../../../../../../../System/Library/Frameworks/IOBluetooth.framework; sourceTree = "<group>"; };
+		4018D06E1B4CFFEC00807430 /* IOBluetoothUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IOBluetoothUI.framework; path = ../../../../../../../../../../System/Library/Frameworks/IOBluetoothUI.framework; sourceTree = "<group>"; };
+		4018D0B41B4E15B500807430 /* CorePlot.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = CorePlot.framework; sourceTree = "<group>"; };
+		404E39981C604AB0009605D4 /* TGStreamMac.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = TGStreamMac.framework; sourceTree = "<group>"; };
+		4066DA181C0FD86C00928757 /* led-off.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "led-off.png"; sourceTree = "<group>"; };
+		4066DA191C0FD86C00928757 /* led-on.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "led-on.png"; sourceTree = "<group>"; };
+		409D9BCA1C520B1C00F3CDDD /* libcurl.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libcurl.tbd; path = usr/lib/libcurl.tbd; sourceTree = SDKROOT; };
+		40B15D571C17B883007AD7E0 /* FFTAccelerate.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = FFTAccelerate.cpp; sourceTree = "<group>"; };
+		40B15D581C17B883007AD7E0 /* FFTAccelerate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FFTAccelerate.h; sourceTree = "<group>"; };
+		40B15D5A1C17BC4C007AD7E0 /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = System/Library/Frameworks/Accelerate.framework; sourceTree = SDKROOT; };
+		40BA2FF21C2EC2AE005FE7B9 /* AlgoSdk.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AlgoSdk.framework; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		4018D03E1B4A8ADB00807430 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				40B15D5B1C17BC4D007AD7E0 /* Accelerate.framework in Frameworks */,
+				404E39991C604AB0009605D4 /* TGStreamMac.framework in Frameworks */,
+				4018D06F1B4CFFEC00807430 /* IOBluetoothUI.framework in Frameworks */,
+				40BA2FF31C2EC2AE005FE7B9 /* AlgoSdk.framework in Frameworks */,
+				4018D0B51B4E15B500807430 /* CorePlot.framework in Frameworks */,
+				4018D06D1B4CFFE400807430 /* IOBluetooth.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		4018D0381B4A8ADB00807430 = {
+			isa = PBXGroup;
+			children = (
+				409D9BCA1C520B1C00F3CDDD /* libcurl.tbd */,
+				404E39981C604AB0009605D4 /* TGStreamMac.framework */,
+				40BA2FF21C2EC2AE005FE7B9 /* AlgoSdk.framework */,
+				40B15D5A1C17BC4C007AD7E0 /* Accelerate.framework */,
+				4018D0B41B4E15B500807430 /* CorePlot.framework */,
+				4018D06E1B4CFFEC00807430 /* IOBluetoothUI.framework */,
+				4018D06C1B4CFFE400807430 /* IOBluetooth.framework */,
+				4018D0431B4A8ADB00807430 /* Algo SDK Sample */,
+				4018D05A1B4A8ADB00807430 /* Algo SDK SampleTests */,
+				4018D0421B4A8ADB00807430 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		4018D0421B4A8ADB00807430 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				4018D0411B4A8ADB00807430 /* Algo SDK Sample.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		4018D0431B4A8ADB00807430 /* Algo SDK Sample */ = {
+			isa = PBXGroup;
+			children = (
+				40B15D571C17B883007AD7E0 /* FFTAccelerate.cpp */,
+				40B15D581C17B883007AD7E0 /* FFTAccelerate.h */,
+				400FFC041B60861700A261AA /* canned_data.c */,
+				4018D0461B4A8ADB00807430 /* AppDelegate.h */,
+				4018D0471B4A8ADB00807430 /* AppDelegate.m */,
+				4018D04B1B4A8ADB00807430 /* ViewController.h */,
+				4018D04C1B4A8ADB00807430 /* ViewController.mm */,
+				4018D04E1B4A8ADB00807430 /* Images.xcassets */,
+				4018D0501B4A8ADB00807430 /* Main.storyboard */,
+				4066DA181C0FD86C00928757 /* led-off.png */,
+				4066DA191C0FD86C00928757 /* led-on.png */,
+				4018D0441B4A8ADB00807430 /* Supporting Files */,
+			);
+			path = "Algo SDK Sample";
+			sourceTree = "<group>";
+		};
+		4018D0441B4A8ADB00807430 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				4018D0451B4A8ADB00807430 /* Info.plist */,
+				4018D0491B4A8ADB00807430 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		4018D05A1B4A8ADB00807430 /* Algo SDK SampleTests */ = {
+			isa = PBXGroup;
+			children = (
+				4018D05D1B4A8ADB00807430 /* Algo_SDK_SampleTests.m */,
+				4018D05B1B4A8ADB00807430 /* Supporting Files */,
+			);
+			path = "Algo SDK SampleTests";
+			sourceTree = "<group>";
+		};
+		4018D05B1B4A8ADB00807430 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				4018D05C1B4A8ADB00807430 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		4018D0401B4A8ADB00807430 /* Algo SDK Sample */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4018D0611B4A8ADB00807430 /* Build configuration list for PBXNativeTarget "Algo SDK Sample" */;
+			buildPhases = (
+				4018D03D1B4A8ADB00807430 /* Sources */,
+				4018D03E1B4A8ADB00807430 /* Frameworks */,
+				4018D03F1B4A8ADB00807430 /* Resources */,
+				4018D06B1B4A8DDF00807430 /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Algo SDK Sample";
+			productName = "Algo SDK Sample";
+			productReference = 4018D0411B4A8ADB00807430 /* Algo SDK Sample.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		4018D0391B4A8ADB00807430 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0720;
+				ORGANIZATIONNAME = NeuroSky;
+				TargetAttributes = {
+					4018D0401B4A8ADB00807430 = {
+						CreatedOnToolsVersion = 6.3.2;
+					};
+				};
+			};
+			buildConfigurationList = 4018D03C1B4A8ADB00807430 /* Build configuration list for PBXProject "Algo SDK Sample" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+				English,
+			);
+			mainGroup = 4018D0381B4A8ADB00807430;
+			productRefGroup = 4018D0421B4A8ADB00807430 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				4018D0401B4A8ADB00807430 /* Algo SDK Sample */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		4018D03F1B4A8ADB00807430 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4066DA1B1C0FD86C00928757 /* led-on.png in Resources */,
+				4066DA1A1C0FD86C00928757 /* led-off.png in Resources */,
+				4018D04F1B4A8ADB00807430 /* Images.xcassets in Resources */,
+				4018D0521B4A8ADB00807430 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		4018D03D1B4A8ADB00807430 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				40B15D591C17B883007AD7E0 /* FFTAccelerate.cpp in Sources */,
+				4018D04D1B4A8ADB00807430 /* ViewController.mm in Sources */,
+				4018D04A1B4A8ADB00807430 /* main.m in Sources */,
+				4018D0481B4A8ADB00807430 /* AppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		4018D0501B4A8ADB00807430 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4018D0511B4A8ADB00807430 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		4018D05F1B4A8ADB00807430 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		4018D0601B4A8ADB00807430 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		4018D0621B4A8ADB00807430 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+					/Users/donald/Desktop/Projects/Project_SDK/Comm_SDK/OSX,
+				);
+				INFOPLIST_FILE = "Algo SDK Sample/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/chilkat-9.5.0-macosx-objc/lib",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.neurosky.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		4018D0631B4A8ADB00807430 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+					/Users/donald/Desktop/Projects/Project_SDK/Comm_SDK/OSX,
+				);
+				GCC_OPTIMIZATION_LEVEL = 0;
+				INFOPLIST_FILE = "Algo SDK Sample/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/chilkat-9.5.0-macosx-objc/lib",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.neurosky.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		4018D03C1B4A8ADB00807430 /* Build configuration list for PBXProject "Algo SDK Sample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4018D05F1B4A8ADB00807430 /* Debug */,
+				4018D0601B4A8ADB00807430 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4018D0611B4A8ADB00807430 /* Build configuration list for PBXNativeTarget "Algo SDK Sample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4018D0621B4A8ADB00807430 /* Debug */,
+				4018D0631B4A8ADB00807430 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 4018D0391B4A8ADB00807430 /* Project object */;
+}

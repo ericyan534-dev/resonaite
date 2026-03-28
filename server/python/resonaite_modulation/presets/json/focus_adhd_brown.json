@@ -1,0 +1,105 @@
+{
+  "name": "focus_adhd_brown",
+  "mode": "focus",
+  "description": "ADHD-optimized focus: Beta AM (18 Hz) with EQ-shaped AM-modulated brown noise.",
+  "target_brainwave_band": "beta",
+  "references": [
+    "S\u00f6derlund, G., Sikstr\u00f6m, S., & Smart, A. (2007). Listen to the noise.",
+    "Helps, S.K., et al. (2014). Different noise types and ADHD symptoms.",
+    "Stochastic resonance literature on optimal noise for neural processing."
+  ],
+  "rationale": "ADHD brains may benefit from higher ambient noise levels (stochastic resonance theory). Brown noise provides strong low-frequency masking. EQ shaping with mid-scoop reduces masking of musical content. Very shallow AM on noise (0.05) creates a secondary entrainment pathway without audible whoosh. AM depths on music are slightly higher than standard focus, but still conservative per the natural-sound guidelines.",
+  "multiband_config": {
+    "crossover_freqs": [
+      200.0,
+      2000.0,
+      6000.0
+    ],
+    "filter_order": 4,
+    "band_names": [
+      "sub_bass",
+      "low_mid",
+      "upper_mid",
+      "highs"
+    ]
+  },
+  "am_params": {
+    "sub_bass": {
+      "rate": 18.0,
+      "depth": 0.18,
+      "waveform": "sine",
+      "ramp_seconds": 5.0,
+      "phase_offset": 0.0
+    },
+    "low_mid": {
+      "rate": 18.0,
+      "depth": 0.12,
+      "waveform": "sine",
+      "ramp_seconds": 5.0,
+      "phase_offset": 0.0
+    },
+    "upper_mid": {
+      "rate": 18.0,
+      "depth": 0.04,
+      "waveform": "sine",
+      "ramp_seconds": 5.0,
+      "phase_offset": 0.0
+    },
+    "highs": {
+      "rate": 18.0,
+      "depth": 0.015,
+      "waveform": "sine",
+      "ramp_seconds": 5.0,
+      "phase_offset": 0.0
+    }
+  },
+  "global_am_mix": 1.0,
+  "noise_params": [
+    {
+      "noise_type": "brown",
+      "level": 0.05,
+      "am_params": {
+        "rate": 18.0,
+        "depth": 0.05,
+        "waveform": "sine",
+        "ramp_seconds": 4.0,
+        "phase_offset": 0.0
+      },
+      "eq": {
+        "bands": [
+          {
+            "filter_type": "lowpass",
+            "freq": 7000.0,
+            "gain_db": 0.0,
+            "q": 0.707,
+            "order": 2
+          },
+          {
+            "filter_type": "peak",
+            "freq": 800.0,
+            "gain_db": -2.5,
+            "q": 1.0,
+            "order": 2
+          },
+          {
+            "filter_type": "highshelf",
+            "freq": 5000.0,
+            "gain_db": -3.5,
+            "q": 0.707,
+            "order": 2
+          }
+        ],
+        "enabled": true
+      },
+      "seed": null,
+      "fade_in_seconds": 3.0
+    }
+  ],
+  "mixer_params": {
+    "master_gain": 0.85,
+    "normalize": true,
+    "limiter_threshold": 0.95,
+    "limiter_knee": 0.1,
+    "make_stereo": true
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "name": "resonaite",
+  "version": "1.0.0",
+  "private": true,
+  "description": "AI-driven sound therapy platform with CIM modulation",
+  "workspaces": ["client", "server"],
+  "scripts": {
+    "dev": "concurrently \"npm run dev:server\" \"npm run dev:client\"",
+    "dev:client": "npm run dev --workspace=client",
+    "dev:server": "npm run dev --workspace=server",
+    "build": "npm run build --workspace=client",
+    "start": "npm run start --workspace=server",
+    "seed": "npm run seed --workspace=server",
+    "init-db": "npm run init-db --workspace=server",
+    "gcs:upload": "npm run gcs:upload --workspace=server",
+    "gcs:upload:dry": "npm run gcs:upload:dry --workspace=server",
+    "gcs:list": "npm run gcs:list --workspace=server"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}

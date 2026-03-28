@@ -1,0 +1,70 @@
+{
+  "name": "focus_beta_18hz",
+  "mode": "focus",
+  "description": "Beta-range (18 Hz) CIM bed for deep focus, with pink noise.",
+  "target_brainwave_band": "beta",
+  "references": [
+    "Calderone, D.J., et al. (2014). Entrainment of neural oscillations. Trends Cogn Sci.",
+    "Thut, G., et al. (2011). Rhythmic TMS causes local entrainment. Current Biology."
+  ],
+  "rationale": "CIM focus: 18 Hz AM applied to a bandpass-filtered bed (150\u20133000 Hz) at -14 dB below dry. The modulation integrates as timbral texture in the musical body, not as audible tremolo. Sub-bass is untouched (bed BPF excludes <150 Hz). Pink noise at -26 dB provides gentle masking without perceptual separation.",
+  "sample_rate": 44100,
+  "input_normalization": "peak",
+  "bed_config": {
+    "low_freq": 150.0,
+    "high_freq": 3000.0,
+    "filter_order": 4,
+    "filter_type": "butterworth",
+    "mix_db": -14.0
+  },
+  "bed_am_params": {
+    "rate": 18.0,
+    "depth": 0.06,
+    "waveform": "sine",
+    "ramp_seconds": 5.0,
+    "phase_offset": 0.0
+  },
+  "am_target": "bed_only",
+  "noise_params": [
+    {
+      "noise_type": "pink",
+      "level": 0.035,
+      "level_db": -26.0,
+      "am_params": null,
+      "eq": {
+        "bands": [
+          {
+            "filter_type": "lowpass",
+            "freq": 8000.0,
+            "gain_db": 0.0,
+            "q": 0.707,
+            "order": 2
+          },
+          {
+            "filter_type": "highshelf",
+            "freq": 4000.0,
+            "gain_db": -3.0,
+            "q": 0.707,
+            "order": 2
+          }
+        ],
+        "enabled": true
+      },
+      "seed": null,
+      "fade_in_seconds": 3.0
+    }
+  ],
+  "mixer_params": {
+    "master_gain": 0.85,
+    "normalize": true,
+    "limiter_threshold": 0.95,
+    "limiter_knee": 0.1,
+    "make_stereo": true
+  },
+  "naturalness_gates": {
+    "modulation_index_increase_max": 0.05,
+    "peak_power_db_max": -45.0,
+    "lf_noise_energy_db_max": -30.0,
+    "enabled": true
+  }
+}

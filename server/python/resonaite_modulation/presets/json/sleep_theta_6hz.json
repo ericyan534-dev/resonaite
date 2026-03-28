@@ -1,0 +1,76 @@
+{
+  "name": "sleep_theta_6hz",
+  "mode": "sleep",
+  "description": "Theta-range (6 Hz) CIM bed for wake-to-sleep transition.",
+  "target_brainwave_band": "theta",
+  "references": [
+    "Schacter, D.L. (1977). EEG theta waves and psychological phenomena."
+  ],
+  "rationale": "CIM theta sleep: 6 Hz AM in the bed (200\u20132500 Hz) at -18 dB. Theta targets the hypnagogic transition. 6 Hz is above the \"slow swell\" perceptual range so integrates as subtle texture. Depth kept very low (0.03) to prevent the 6 Hz component from becoming perceptually dominant. Pink noise with warm EQ at -28 dB.",
+  "sample_rate": 44100,
+  "input_normalization": "peak",
+  "bed_config": {
+    "low_freq": 200.0,
+    "high_freq": 2500.0,
+    "filter_order": 4,
+    "filter_type": "butterworth",
+    "mix_db": -18.0
+  },
+  "bed_am_params": {
+    "rate": 6.0,
+    "depth": 0.03,
+    "waveform": "sine",
+    "ramp_seconds": 8.0,
+    "phase_offset": 0.0
+  },
+  "am_target": "bed_only",
+  "noise_params": [
+    {
+      "noise_type": "pink",
+      "level": 0.02,
+      "level_db": -28.0,
+      "am_params": null,
+      "eq": {
+        "bands": [
+          {
+            "filter_type": "lowpass",
+            "freq": 6000.0,
+            "gain_db": 0.0,
+            "q": 0.707,
+            "order": 3
+          },
+          {
+            "filter_type": "highshelf",
+            "freq": 3000.0,
+            "gain_db": -4.0,
+            "q": 0.707,
+            "order": 2
+          },
+          {
+            "filter_type": "lowshelf",
+            "freq": 200.0,
+            "gain_db": 2.0,
+            "q": 0.707,
+            "order": 2
+          }
+        ],
+        "enabled": true
+      },
+      "seed": null,
+      "fade_in_seconds": 6.0
+    }
+  ],
+  "mixer_params": {
+    "master_gain": 0.75,
+    "normalize": true,
+    "limiter_threshold": 0.95,
+    "limiter_knee": 0.1,
+    "make_stereo": true
+  },
+  "naturalness_gates": {
+    "modulation_index_increase_max": 0.05,
+    "peak_power_db_max": -38.0,
+    "lf_noise_energy_db_max": -30.0,
+    "enabled": true
+  }
+}
