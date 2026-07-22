@@ -1,0 +1,25 @@
+Copyright (c) 2026 Liqian Yan. All rights reserved.
+
+This repository is published for demonstration, review, and portfolio purposes
+only. It is NOT open-source software.
+
+You MAY:
+  - View and read the source code.
+  - Reference it for evaluation, academic discussion, or educational study,
+    with attribution.
+
+You MAY NOT, without prior written permission from the copyright holder:
+  - Use this software or any part of it in a product or service.
+  - Copy, modify, merge, publish, distribute, sublicense, or sell copies.
+  - Create derivative works based on it.
+
+Third-party components (including any vendor SDKs, model APIs, and npm and
+PyPI dependencies) remain subject to their own respective licenses. This
+notice does not grant any rights to redistribute those components.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED. Resonaite is an experimental research and wellness prototype. It is
+not a medical device and is not intended to diagnose, treat, cure, or prevent
+any disease or condition.
+
+For licensing enquiries: eric@linkscape.app
