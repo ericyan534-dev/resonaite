@@ -49,7 +49,11 @@ RUN mkdir -p /tmp/resonaite ./server/uploads/generated ./server/uploads/processe
 # Environment
 ENV NODE_ENV=production
 ENV PORT=8080
-ENV JWT_SECRET=resonaite-prod-secret-change-in-env
+
+# JWT_SECRET is intentionally NOT baked into the image.
+# It must be supplied at runtime, e.g.:
+#   docker run -e JWT_SECRET="$(openssl rand -hex 32)" ...
+# The server should fail fast on startup if it is unset.
 
 EXPOSE 8080
 

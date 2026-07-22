@@ -3,12 +3,30 @@
  * Centralizes all environment variables with defaults
  */
 
+const NODE_ENV = process.env.NODE_ENV || 'development';
+
+// Never fall back to a hardcoded signing key in production: this file is public,
+// so a default secret would let anyone forge authentication tokens.
+function requireJwtSecret() {
+  if (process.env.JWT_SECRET) return process.env.JWT_SECRET;
+
+  if (NODE_ENV === 'production') {
+    throw new Error(
+      'JWT_SECRET is not set. Refusing to start in production with an insecure default. ' +
+      'Generate one with: node -e "console.log(require(\'crypto\').randomBytes(32).toString(\'hex\'))"'
+    );
+  }
+
+  console.warn('[config] JWT_SECRET unset — using an insecure development-only key.');
+  return 'resonaite-dev-secret-change-me';
+}
+
 module.exports = {
   PORT: process.env.PORT || 3001,
-  NODE_ENV: process.env.NODE_ENV || 'development',
+  NODE_ENV,
 
   // Authentication
-  JWT_SECRET: process.env.JWT_SECRET || 'resonaite-dev-secret-change-me',
+  JWT_SECRET: requireJwtSecret(),
   JWT_EXPIRY: process.env.JWT_EXPIRY || '7d',
 
   // Database
