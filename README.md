@@ -1,8 +1,17 @@
 # Resonaite
 
-**AI-Powered Sound Therapy That Listens to Your Brain.**
+**An experimental adaptive-audio platform that responds to EEG signals in real time.**
 
-Resonaite is a real-time sound therapy platform that embeds invisible brainwave-targeting modulation into real music using a custom Cortical Integration Modulation (CIM) engine, generates unlimited therapeutic tracks via AI, and adapts in real-time to the user's brain state through a closed-loop EEG system.
+Resonaite embeds low-frequency amplitude modulation into music using a custom Cortical
+Integration Modulation (CIM) engine, generates tracks via AI music models, and adapts
+modulation parameters in real time from a consumer EEG headset in a closed loop.
+
+> ⚠️ **Research prototype — not a medical device.**
+> Resonaite is an engineering and research project exploring closed-loop audio adaptation.
+> It is **not** a medical device, has **not** undergone clinical validation, and is not
+> intended to diagnose, treat, cure, or prevent any disease or condition. Nothing here
+> should be read as a therapeutic claim. See
+> [Evidence and Limitations](#evidence-and-limitations).
 
 ---
 
@@ -33,7 +42,7 @@ Resonaite is a real-time sound therapy platform that embeds invisible brainwave-
 ## Key Features
 
 - **CIM Engine** — 7-stage signal processing pipeline that embeds brainwave-frequency amplitude modulation into music with organic jitter, depth breathing, and waveform morphing so it sounds natural, not clinical
-- **AI Music Generation** — Suno V5 + Google Gemini prompt enhancement for unlimited personalized therapeutic tracks with BPM/key enforcement and negative tag control
+- **AI Music Generation** — Suno V5 + Google Gemini prompt enhancement for personalized track generation with BPM/key enforcement and negative tag control
 - **Closed-Loop EEG** — NeuroSky MindWave integration reading 8 brainwave bands at 1 Hz, computing derived metrics (Engagement Index, Alpha Dominance, Theta/Beta Ratio), and adapting CIM parameters in real-time
 - **73 Curated Tracks** — Organized into 9 mood-clustered albums (Relax / Focus / Sleep), all normalized to -14 LUFS via EBU R128
 - **PWA with Offline Playback** — Service Worker caches audio, API responses, and app shell for full offline capability
@@ -121,6 +130,39 @@ The Cortical Integration Modulation pipeline processes audio in 4 stages:
 
 Presets: `focus_beta_18hz`, `focus_adhd_pink`, `focus_adhd_brown`, `relax_alpha_10hz`, `sleep_delta_2hz`, `sleep_theta_6hz`
 
+## Evidence and Limitations
+
+Being explicit about what this project has and has not established:
+
+**Implemented and verifiable in this repository**
+- The CIM signal-processing pipeline, including the filtering, modulation, noise, and
+  stereo stages described above, with measurable naturalness quality gates.
+- Closed-loop plumbing: EEG samples are read from a NeuroSky MindWave, derived metrics are
+  computed, and CIM parameters are adjusted from them at runtime.
+- AI track generation, offline-capable PWA playback, and the loudness-normalized library.
+
+**Hypothesized, not demonstrated**
+- That the embedded modulation produces any specific neural entrainment in the listener.
+- That the closed-loop adaptation improves focus, relaxation, or sleep relative to
+  unmodulated music, or to a placebo.
+- That the derived EEG metrics (Engagement Index, Alpha Dominance, Theta/Beta Ratio) are
+  valid measures of the cognitive states their names suggest.
+
+**Not done**
+- No clinical trial, controlled study, IRB review, or regulatory assessment of any kind.
+- No blinded or placebo-controlled comparison.
+- No validation against research-grade EEG. A consumer single-channel headset is a
+  convenience sensor and is sensitive to motion and contact artifacts.
+
+The frequency presets are informed by published literature on auditory beat stimulation,
+but that literature is itself mixed, and **no claim is made that this implementation
+reproduces any published effect**. Treat the outputs as an audio experience, not an
+intervention.
+
 ## License
 
-All rights reserved.
+Copyright (c) 2026 Liqian Yan. All rights reserved. See [LICENSE](LICENSE).
+
+This repository is published for demonstration and review; it is not open-source software.
+Third-party components — including the vendor EEG SDK under `OSX Developer Tools 3.3/`,
+model APIs, and npm/PyPI dependencies — remain subject to their own licenses.
