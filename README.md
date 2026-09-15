@@ -6,12 +6,6 @@ Resonaite embeds low-frequency amplitude modulation into music using a custom Co
 Integration Modulation (CIM) engine, generates tracks via AI music models, and adapts
 modulation parameters in real time from a consumer EEG headset in a closed loop.
 
-> ⚠️ **Research prototype — not a medical device.**
-> Resonaite is an engineering and research project exploring closed-loop audio adaptation.
-> It is **not** a medical device, has **not** undergone clinical validation, and is not
-> intended to diagnose, treat, cure, or prevent any disease or condition. Nothing here
-> should be read as a therapeutic claim. See
-> [Evidence and Limitations](#evidence-and-limitations).
 
 ---
 
@@ -129,35 +123,6 @@ The Cortical Integration Modulation pipeline processes audio in 4 stages:
 4. **Stereo Mix** — Haas-effect widening, decorrelated noise, soft limiting, and naturalness quality gates (delta < 0.06)
 
 Presets: `focus_beta_18hz`, `focus_adhd_pink`, `focus_adhd_brown`, `relax_alpha_10hz`, `sleep_delta_2hz`, `sleep_theta_6hz`
-
-## Evidence and Limitations
-
-Being explicit about what this project has and has not established:
-
-**Implemented and verifiable in this repository**
-- The CIM signal-processing pipeline, including the filtering, modulation, noise, and
-  stereo stages described above, with measurable naturalness quality gates.
-- Closed-loop plumbing: EEG samples are read from a NeuroSky MindWave, derived metrics are
-  computed, and CIM parameters are adjusted from them at runtime.
-- AI track generation, offline-capable PWA playback, and the loudness-normalized library.
-
-**Hypothesized, not demonstrated**
-- That the embedded modulation produces any specific neural entrainment in the listener.
-- That the closed-loop adaptation improves focus, relaxation, or sleep relative to
-  unmodulated music, or to a placebo.
-- That the derived EEG metrics (Engagement Index, Alpha Dominance, Theta/Beta Ratio) are
-  valid measures of the cognitive states their names suggest.
-
-**Not done**
-- No clinical trial, controlled study, IRB review, or regulatory assessment of any kind.
-- No blinded or placebo-controlled comparison.
-- No validation against research-grade EEG. A consumer single-channel headset is a
-  convenience sensor and is sensitive to motion and contact artifacts.
-
-The frequency presets are informed by published literature on auditory beat stimulation,
-but that literature is itself mixed, and **no claim is made that this implementation
-reproduces any published effect**. Treat the outputs as an audio experience, not an
-intervention.
 
 ## License
 
