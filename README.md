@@ -1,6 +1,6 @@
 # Resonaite
 
-**An experimental adaptive-audio platform that responds to EEG signals in real time.**
+**An experimental adaptive-audio platform that responds to EEG brain signals in real time.**
 
 Resonaite embeds low-frequency amplitude modulation into music using a custom Cortical
 Integration Modulation (CIM) engine, generates tracks via AI music models, and adapts
